@@ -34,7 +34,7 @@ public class BiggerCraftingTables
 	@Mod.Instance
 	public static BiggerCraftingTables instance;
 
-	public static final int GUI_ID_BIG_CRAFTING_TABLE = 0, GUI_ID_HUGE_CRAFTING_TABLE = 1, GUI_ID_AUTO_BIG_CRAFTING_TABLE = 2, GUI_ID_AUTO_HUGE_CRAFTING_TABLE = 3;
+	public static final int GUI_ID_BIG_CRAFTING_TABLE = 0, GUI_ID_HUGE_CRAFTING_TABLE = 1, GUI_ID_GIANT_CRAFTING_TABLE = 2, GUI_ID_AUTO_BIG_CRAFTING_TABLE = 3, GUI_ID_AUTO_HUGE_CRAFTING_TABLE = 4, GUI_ID_AUTO_GIANT_CRAFTING_TABLE = 5;
 
 	@SidedProxy(clientSide = CLIENT_PROXY, serverSide = SERVER_PROXY)
 	public static CommonProxy proxy;

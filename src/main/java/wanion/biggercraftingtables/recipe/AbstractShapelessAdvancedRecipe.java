@@ -51,7 +51,7 @@ public abstract class AbstractShapelessAdvancedRecipe implements IAdvancedRecipe
 				continue;
 			recipeSize++;
 		}
-		if (recipeSize == 0 || recipeSize > 49)
+		if (recipeSize == 0 || recipeSize > 81)
 			throw new RuntimeException("Invalid ShapelessHugeRecipe");
 		this.recipeSize = recipeSize;
 	}

@@ -15,6 +15,7 @@ import net.minecraft.world.World;
 import wanion.biggercraftingtables.BiggerCraftingTables;
 import wanion.biggercraftingtables.block.big.*;
 import wanion.biggercraftingtables.block.huge.*;
+import wanion.biggercraftingtables.block.giant.*;
 
 public final class GuiHandler implements IGuiHandler
 {
@@ -35,12 +36,18 @@ public final class GuiHandler implements IGuiHandler
 			case BiggerCraftingTables.GUI_ID_HUGE_CRAFTING_TABLE:
 				if (tileEntity instanceof TileEntityHugeCraftingTable)
 					return new ContainerHugeCraftingTable((TileEntityHugeCraftingTable) tileEntity, player.inventory);
+			case BiggerCraftingTables.GUI_ID_GIANT_CRAFTING_TABLE:
+				if (tileEntity instanceof TileEntityGiantCraftingTable)
+					return new ContainerGiantCraftingTable((TileEntityGiantCraftingTable) tileEntity, player.inventory);
 			case BiggerCraftingTables.GUI_ID_AUTO_BIG_CRAFTING_TABLE:
 				if (tileEntity instanceof TileEntityAutoBigCraftingTable)
 					return new ContainerAutoBigCraftingTable((TileEntityAutoBigCraftingTable) tileEntity, player.inventory);
 			case BiggerCraftingTables.GUI_ID_AUTO_HUGE_CRAFTING_TABLE:
 				if (tileEntity instanceof TileEntityAutoHugeCraftingTable)
 					return new ContainerAutoHugeCraftingTable((TileEntityAutoHugeCraftingTable) tileEntity, player.inventory);
+			case BiggerCraftingTables.GUI_ID_AUTO_GIANT_CRAFTING_TABLE:
+				if (tileEntity instanceof TileEntityAutoGiantCraftingTable)
+					return new ContainerAutoGiantCraftingTable((TileEntityAutoGiantCraftingTable) tileEntity, player.inventory);
 			default:
 				return null;
 		}
@@ -59,12 +66,18 @@ public final class GuiHandler implements IGuiHandler
 			case BiggerCraftingTables.GUI_ID_HUGE_CRAFTING_TABLE:
 				if (tileEntity instanceof TileEntityHugeCraftingTable)
 					return new GuiHugeCraftingTable((TileEntityHugeCraftingTable) tileEntity, player.inventory);
+			case BiggerCraftingTables.GUI_ID_GIANT_CRAFTING_TABLE:
+				if (tileEntity instanceof TileEntityGiantCraftingTable)
+					return new GuiGiantCraftingTable((TileEntityGiantCraftingTable) tileEntity, player.inventory);
 			case BiggerCraftingTables.GUI_ID_AUTO_BIG_CRAFTING_TABLE:
 				if (tileEntity instanceof TileEntityAutoBigCraftingTable)
 					return new GuiAutoBigCraftingTable((TileEntityAutoBigCraftingTable) tileEntity, player.inventory);
 			case BiggerCraftingTables.GUI_ID_AUTO_HUGE_CRAFTING_TABLE:
 				if (tileEntity instanceof TileEntityAutoHugeCraftingTable)
 					return new GuiAutoHugeCraftingTable((TileEntityAutoHugeCraftingTable) tileEntity, player.inventory);
+			case BiggerCraftingTables.GUI_ID_AUTO_GIANT_CRAFTING_TABLE:
+				if (tileEntity instanceof TileEntityAutoGiantCraftingTable)
+					return new GuiAutoGiantCraftingTable((TileEntityAutoGiantCraftingTable) tileEntity, player.inventory);
 			default:
 				return null;
 		}

@@ -22,5 +22,5 @@ public final class Reference
 	public static final String CLIENT_PROXY = "wanion.biggercraftingtables.client.ClientProxy";
 	public static final String SERVER_PROXY = "wanion.biggercraftingtables.CommonProxy";
 	public static final Random RANDOM = new Random();
-	public static final List<String> TYPES = Arrays.asList("Big", "Huge");
+	public static final List<String> TYPES = Arrays.asList("Big", "Huge", "Giant");
 }

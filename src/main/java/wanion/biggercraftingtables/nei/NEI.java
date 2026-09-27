@@ -13,6 +13,8 @@ import codechicken.nei.recipe.DefaultOverlayHandler;
 import codechicken.nei.recipe.TemplateRecipeHandler;
 import wanion.biggercraftingtables.block.big.GuiAutoBigCraftingTable;
 import wanion.biggercraftingtables.block.big.GuiBigCraftingTable;
+import wanion.biggercraftingtables.block.giant.GuiAutoGiantCraftingTable;
+import wanion.biggercraftingtables.block.giant.GuiGiantCraftingTable;
 import wanion.biggercraftingtables.block.huge.GuiAutoHugeCraftingTable;
 import wanion.biggercraftingtables.block.huge.GuiHugeCraftingTable;
 
@@ -32,6 +34,7 @@ public final class NEI
 		API.setGuiOffset(GuiAutoBigCraftingTable.class, 79, -2);
 		API.registerGuiOverlay(GuiAutoBigCraftingTable.class, "big", 79, -2);
 		API.registerGuiOverlayHandler(GuiAutoBigCraftingTable.class, new DefaultOverlayHandler(79, -2), "big");
+
 		registerHandler(new HugeShapedRecipeHandler());
 		registerHandler(new HugeShapelessRecipeHandler());
 		API.setGuiOffset(GuiHugeCraftingTable.class, 4, 13);
@@ -41,6 +44,14 @@ public final class NEI
 		API.registerGuiOverlay(GuiAutoHugeCraftingTable.class, "huge", 135, 13);
 		API.registerGuiOverlayHandler(GuiAutoHugeCraftingTable.class, new DefaultOverlayHandler(135, 13), "huge");
 
+		registerHandler(new GiantShapedRecipeHandler());
+		registerHandler(new GiantShapelessRecipeHandler());
+		API.setGuiOffset(GuiGiantCraftingTable.class, 4, 13);
+		API.registerGuiOverlay(GuiGiantCraftingTable.class, "giant", 4, 13);
+		API.registerGuiOverlayHandler(GuiGiantCraftingTable.class, new DefaultOverlayHandler(4, 13), "giant");
+		API.setGuiOffset(GuiAutoGiantCraftingTable.class, 135, 13);
+		API.registerGuiOverlay(GuiAutoGiantCraftingTable.class, "giant", 135, 13);
+		API.registerGuiOverlayHandler(GuiAutoGiantCraftingTable.class, new DefaultOverlayHandler(135, 13), "giant");
 	}
 
 	private static void registerHandler(@Nonnull final TemplateRecipeHandler templateRecipeHandler)

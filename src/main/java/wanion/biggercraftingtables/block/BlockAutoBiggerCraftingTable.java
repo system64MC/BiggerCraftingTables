@@ -29,6 +29,7 @@ import wanion.biggercraftingtables.BiggerCraftingTables;
 import wanion.biggercraftingtables.Reference;
 import wanion.biggercraftingtables.block.big.TileEntityAutoBigCraftingTable;
 import wanion.biggercraftingtables.block.huge.TileEntityAutoHugeCraftingTable;
+import wanion.biggercraftingtables.block.giant.TileEntityAutoGiantCraftingTable;
 
 import javax.annotation.Nonnull;
 import java.util.List;
@@ -56,6 +57,8 @@ public final class BlockAutoBiggerCraftingTable extends BlockContainer
 				return new TileEntityAutoBigCraftingTable();
 			case 1:
 				return new TileEntityAutoHugeCraftingTable();
+			case 2:
+				return new TileEntityAutoGiantCraftingTable();
 			default:
 				return null;
 		}
@@ -64,7 +67,7 @@ public final class BlockAutoBiggerCraftingTable extends BlockContainer
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(@Nonnull final IIconRegister iIconRegister)
 	{
-		textures = new IIcon[2][3];
+		textures = new IIcon[3][3];
 		for (int i = 0; i < Reference.TYPES.size(); i++) {
 			final String type = Reference.TYPES.get(i);
 			textures[i][0] = iIconRegister.registerIcon(MOD_ID + ":Auto" + type + "CraftingTableTop");
@@ -76,7 +79,7 @@ public final class BlockAutoBiggerCraftingTable extends BlockContainer
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(final int side, int metadata)
 	{
-		if (metadata < 0 || metadata > 1)
+		if (metadata < 0 || metadata > 2)
 			metadata = 0;
 		switch (side) {
 			case 0:
@@ -92,7 +95,7 @@ public final class BlockAutoBiggerCraftingTable extends BlockContainer
 	@SideOnly(Side.CLIENT)
 	public void getSubBlocks(final Item block, final CreativeTabs creativeTabs, final List list)
 	{
-		for (int i = 0; i < 2; i++)
+		for (int i = 0; i < 3; i++)
 			list.add(new ItemStack(block, 1, i));
 	}
 
@@ -105,6 +108,8 @@ public final class BlockAutoBiggerCraftingTable extends BlockContainer
 				FMLNetworkHandler.openGui(entityPlayer, BiggerCraftingTables.instance, BiggerCraftingTables.GUI_ID_AUTO_BIG_CRAFTING_TABLE, world, x, y, z);
 			else if (tileEntity instanceof TileEntityAutoHugeCraftingTable)
 				FMLNetworkHandler.openGui(entityPlayer, BiggerCraftingTables.instance, BiggerCraftingTables.GUI_ID_AUTO_HUGE_CRAFTING_TABLE, world, x, y, z);
+			else if (tileEntity instanceof TileEntityAutoGiantCraftingTable)
+				FMLNetworkHandler.openGui(entityPlayer, BiggerCraftingTables.instance, BiggerCraftingTables.GUI_ID_AUTO_GIANT_CRAFTING_TABLE, world, x, y, z);
 			else
 				return false;
 		}
