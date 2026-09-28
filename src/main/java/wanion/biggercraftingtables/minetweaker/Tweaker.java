@@ -19,5 +19,6 @@ public final class Tweaker
 		MineTweakerAPI.registerClass(BigCrafting.class);
 		MineTweakerAPI.registerClass(HugeCrafting.class);
 		MineTweakerAPI.registerClass(GiantCrafting.class);
+		MineTweakerAPI.registerClass(MassiveCrafting.class);
 	}
 }

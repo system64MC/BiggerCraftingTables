@@ -9,8 +9,10 @@ package wanion.biggercraftingtables.client;
  */
 
 import cpw.mods.fml.common.Loader;
+import cpw.mods.fml.common.ModContainer;
 import wanion.biggercraftingtables.CommonProxy;
 import wanion.biggercraftingtables.nei.NEI;
+import wanion.biggercraftingtables.nei.NEIEventHandler;
 
 public final class ClientProxy extends CommonProxy
 {
@@ -18,7 +20,15 @@ public final class ClientProxy extends CommonProxy
 	public void postInit()
 	{
 		super.postInit();
-		if (Loader.isModLoaded(	"NotEnoughItems"))
+		if (Loader.isModLoaded("NotEnoughItems")) {
+			ModContainer neiMod = Loader.instance().getIndexedModList().get("NotEnoughItems");
+			System.out.println("NEI detected, initializing and registering event handler");
+			System.out.println(neiMod.getVersion());
 			NEI.init();
+
+			// Is it the GTNH Version? If so, we use GTNH features.
+			if(neiMod.getVersion().toLowerCase().contains("gtnh"))
+				NEIEventHandler.register();
+		}
 	}
 }

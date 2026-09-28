@@ -3,18 +3,22 @@ itemGroup.biggercraftingtables=Bigger Crafting Tables
 tile.biggercraftingtables:Big.name=Big Crafting Table
 tile.biggercraftingtables:Huge.name=Huge Crafting Table
 tile.biggercraftingtables:Giant.name=Giant Crafting Table
+tile.biggercraftingtables:Massive.name=Massive Crafting Table
 
 tile.biggercraftingtables:AutoBig.name=Auto Big Crafting Table
 tile.biggercraftingtables:AutoHuge.name=Auto Huge Crafting Table
 tile.biggercraftingtables:AutoGiant.name=Auto Giant Crafting Table
+tile.biggercraftingtables:AutoMassive.name=Auto Massive Crafting Table
 
 container.BigCraftingTable=Big Crafting Table
 container.HugeCraftingTable=Huge Crafting Table
 container.GiantCraftingTable=Giant Crafting Table
+container.MassiveCraftingTable=Massive Crafting Table
 
 container.AutoBigCraftingTable=Auto Big Crafting Table
 container.AutoHugeCraftingTable=Auto Huge Crafting Table
 container.AutoGiantCraftingTable=Auto Giant Crafting Table
+container.AutoMassiveCraftingTable=Auto Massive Crafting Table
 
 crafting.big.shaped=Big Shaped
 crafting.big.shapeless=Big Shapeless
@@ -24,3 +28,6 @@ crafting.huge.shapeless=Huge Shapeless
 
 crafting.giant.shaped=Giant Shaped
 crafting.giant.shapeless=Giant Shapeless
+
+crafting.massive.shaped=Massive Shaped
+crafting.massive.shapeless=Massive Shapeless

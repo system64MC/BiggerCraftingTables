@@ -21,6 +21,8 @@ import wanion.biggercraftingtables.block.huge.TileEntityAutoHugeCraftingTable;
 import wanion.biggercraftingtables.block.huge.TileEntityHugeCraftingTable;
 import wanion.biggercraftingtables.block.giant.TileEntityAutoGiantCraftingTable;
 import wanion.biggercraftingtables.block.giant.TileEntityGiantCraftingTable;
+import wanion.biggercraftingtables.block.massive.TileEntityAutoMassiveCraftingTable;
+import wanion.biggercraftingtables.block.massive.TileEntityMassiveCraftingTable;
 import wanion.biggercraftingtables.core.GuiHandler;
 import wanion.biggercraftingtables.minetweaker.Tweaker;
 
@@ -36,9 +38,12 @@ public class CommonProxy
 		GameRegistry.registerTileEntity(TileEntityBigCraftingTable.class, MOD_ID + ":BigTable");
 		GameRegistry.registerTileEntity(TileEntityHugeCraftingTable.class, MOD_ID + ":HugeTable");
 		GameRegistry.registerTileEntity(TileEntityGiantCraftingTable.class, MOD_ID + ":GiantTable");
+		GameRegistry.registerTileEntity(TileEntityMassiveCraftingTable.class, MOD_ID + ":MassiveTable");
+
 		GameRegistry.registerTileEntity(TileEntityAutoBigCraftingTable.class, MOD_ID + ":AutoBigTable");
 		GameRegistry.registerTileEntity(TileEntityAutoHugeCraftingTable.class, MOD_ID + ":AutoHugeTable");
 		GameRegistry.registerTileEntity(TileEntityAutoGiantCraftingTable.class, MOD_ID + ":AutoGiantTable");
+		GameRegistry.registerTileEntity(TileEntityAutoMassiveCraftingTable.class, MOD_ID + ":AutoMassiveTable");
 	}
 
 	public void postInit()
